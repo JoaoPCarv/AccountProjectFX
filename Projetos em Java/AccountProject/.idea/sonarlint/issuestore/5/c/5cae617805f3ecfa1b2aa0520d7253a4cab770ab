@@ -1,0 +1,11 @@
+
+k
+java:S1192="IDefine a constant instead of duplicating this literal "DateTime" 3 times.(öñŞıÿÿÿÿÿ8†€àñƒ1
+m	java:S1177"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(­âñÍ8‡€àñƒ1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ŠèÚÍ8¬€àñƒ1
+W
+java:S1133"5Do not forget to remove this deprecated code someday.(Æ•éÿÿÿÿÿ8³€àñƒ1
+J
+java:S1123"(Add the missing @deprecated Javadoc tag.(Æ•éÿÿÿÿÿ8³€àñƒ1
+a
+java:S1612"DReplace this lambda with method reference 'Objects::requireNonNull'.(§”éë8¶€àñƒ1

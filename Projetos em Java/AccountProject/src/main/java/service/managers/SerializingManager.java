@@ -1,4 +1,4 @@
-package service.serializingService;
+package service.managers;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -7,8 +7,8 @@ import java.io.Serializable;
 
 public final class SerializingManager {
 
-    @Deprecated
-    private SerializingManager() {}
+    @Deprecated(since = "1.0")
+    private SerializingManager() { /* This class should not be instantiated. */ }
 
     public static void writeObject(Serializable ser, ObjectOutputStream out) throws IOException {
 

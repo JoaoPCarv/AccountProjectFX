@@ -1,11 +1,14 @@
+package service;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import static org.junit.Assert.assertEquals;
 import org.junit.runners.BlockJUnit4ClassRunner;
-import service.propertiesService.HibernateProperties;
+import service.properties.HibernateProperties;
 
 import java.util.Properties;
+
+import static org.junit.Assert.assertEquals;
 
 @RunWith(BlockJUnit4ClassRunner.class)
 public final class JDBCTest {

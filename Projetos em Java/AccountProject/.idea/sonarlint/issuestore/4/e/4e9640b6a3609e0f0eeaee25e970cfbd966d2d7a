@@ -1,0 +1,19 @@
+
+g	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ôãÑøƒ1
+g	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ôãÑøƒ1
+g	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õãÑøƒ1
+g	java:S1126"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õãÑøƒ1
+g	java:S1128"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õãÑøƒ1
+g	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8õãÑøƒ1
+Q
+java:S1133"5Do not forget to remove this deprecated code someday.(€Îo8£äÑøƒ1
+D
+java:S1123"(Add the missing @deprecated Javadoc tag.(€Îo8£äÑøƒ1
+`
+java:S2147#"DCombine this catch with the one at line 33, which has the same body.(ÄÜŞc8§äÑøƒ1
+a
+java:S21475"DCombine this catch with the one at line 51, which has the same body.(ï­£Ä8®äÑøƒ1
+`
+java:S21477"DCombine this catch with the one at line 53, which has the same body.(ÄÜŞc8®äÑøƒ1
+a
+java:S21479"DCombine this catch with the one at line 55, which has the same body.(¨î´¾8°äÑøƒ1

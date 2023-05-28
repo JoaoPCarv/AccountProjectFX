@@ -9,9 +9,9 @@ import java.util.Properties;
 public interface PropertyManager {
 
      Properties loadProperties(String path) throws IOException;
-     Map<String, String> getPropertiesMap() throws IOException;
      String getProperty(Properties properties, String key) throws IOException, PropertyNotFoundException;
-     void setProperty(Properties properties, String key, String value) throws IOException;
+     void setProperty(Properties properties, String key, String value, String path) throws IOException;
+     Map<String, String> getPropertiesMap(Properties properties) throws IOException;
 
 
 }

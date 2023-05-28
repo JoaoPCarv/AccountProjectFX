@@ -1,0 +1,12 @@
+
+g	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8Ì–Ëôƒ1
+g	java:S112Y"FDefine and throw a dedicated exception instead of using a generic one.(¼ÿ¾¹ÿÿÿÿÿ8Í–Ëôƒ1
+R
+java:S1133"5Do not forget to remove this deprecated code someday.(ÓÀ‹¼8—Ëôƒ1
+E
+java:S1123"(Add the missing @deprecated Javadoc tag.(ÓÀ‹¼8—Ëôƒ1
+f
+java:S1854T"DRemove this useless assignment to local variable "simpleDateFormat".(ß‹‚Íÿÿÿÿÿ8œ—Ëôƒ1
+W
+java:S1481T"5Remove this unused "simpleDateFormat" local variable.(ß‹‚Íÿÿÿÿÿ8Ÿ—Ëôƒ1
+V	java:S106‚"9Replace this use of System.out or System.err by a logger.(¨Ù÷õ8¦—Ëôƒ1
