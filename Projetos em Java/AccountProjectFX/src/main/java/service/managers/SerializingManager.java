@@ -18,24 +18,18 @@ public final class SerializingManager {
         }
     }
 
-    public static Serializable readObject(ObjectInputStream in) throws NullPointerException, IOException {
-
-        Serializable ser = null;
+    public static Serializable readObject(ObjectInputStream in) throws NullPointerException,
+            IOException, ClassNotFoundException {
 
         try (in) {
-            try {
-                Object o = in.readObject();
-                if (!(o instanceof Serializable))
-                    throw new ClassCastException("Object read from File is not Serializable.");
+            Object o = in.readObject();
 
-                ser = (Serializable) o;
+            if(o == null) throw new NullPointerException("Serial-Reading did not succeed.");
 
-            } catch (IOException | ClassNotFoundException ex) {
-                ex.printStackTrace();
-            }
+            if (!(o instanceof Serializable))
+                throw new ClassCastException("Object read from File is not Serializable.");
+
+            return (Serializable) o;
         }
-        if(ser == null) throw new NullPointerException("Serial-Reading did not succeed.");
-
-        return ser;
     }
 }

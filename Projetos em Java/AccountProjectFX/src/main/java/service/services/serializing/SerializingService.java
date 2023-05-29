@@ -22,7 +22,7 @@ public final class SerializingService {
     private SerializingService() { /* This class should not be instantiated. */ }
 
     public static <B extends Bean> String getThisBeanSerializingPath(Class<B> clazzB, int hashCode) throws IOException, URISyntaxException {
-        return BeanProperties.getBeanDirectoryPath(clazzB) + hashCode + ".txt";
+        return BeanProperties.getBeanDirectoryPath(clazzB) + hashCode + ".ser";
     }
 
     public static <B extends Bean> void serializeBean(B bean, String type, String host) throws IOException {
@@ -31,11 +31,7 @@ public final class SerializingService {
             bean.setLastSerializationDateTime(DateTimeService.getFormattedDateTimeWithZoneIdAndLocale(type, host));
             SerializingManager.writeObject(bean, out);
             logBeanSerializingProcess(SER, bean.getClass(), type, host);
-        } catch (PropertyNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidArgumentException e) {
-            throw new RuntimeException(e);
-        } catch (URISyntaxException e) {
+        } catch (PropertyNotFoundException | InvalidArgumentException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
@@ -51,16 +47,11 @@ public final class SerializingService {
             logBeanSerializingProcess(DESER, clazzB, type, host);
             return (B) ser;
 
-        } catch (FileNotFoundException e) {
+        } catch (FileNotFoundException | ClassNotFoundException |
+                 URISyntaxException | PropertyNotFoundException | InvalidArgumentException e) {
             throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InvalidArgumentException e) {
-            throw new RuntimeException(e);
-        } catch (PropertyNotFoundException e) {
-            throw new RuntimeException(e);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+        } catch (IOException ioe) {
+            throw new RuntimeException(ioe);
         }
     }
 
