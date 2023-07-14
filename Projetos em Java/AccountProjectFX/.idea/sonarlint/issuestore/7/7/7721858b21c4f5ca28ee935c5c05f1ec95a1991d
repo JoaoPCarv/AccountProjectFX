@@ -1,8 +1,0 @@
-
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ø°‰€†1
-W
-java:S1133"5Do not forget to remove this deprecated code someday.(·óçîûÿÿÿÿ8‹ò…1
-J
-java:S1123"(Add the missing @deprecated Javadoc tag.(·óçîûÿÿÿÿ8‹ò…1
-A
-java:S1168"$Return an empty map instead of null.(¥¹ï8“‹ò…1

@@ -1,17 +1,0 @@
-
-R
-java:S1133"5Do not forget to remove this deprecated code someday.(™…º¥8êØõ„†1
-E
-java:S1123"(Add the missing @deprecated Javadoc tag.(™…º¥8êØõ„†1
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(÷»¿Œıÿÿÿÿ8íØõ„†1
-R
-java:S1128"0Remove this unused import 'model.beans.Account'.(ŠéÔÅÿÿÿÿÿ8ëìõ„†1
-i
-java:S1128"LRemove this unused import 'service.services.serializing.SerializingService'.(ãòè¸8ëìõ„†1
-P
-java:S1128"3Remove this unused import 'java.io.BufferedReader'.(€é²Å8ëìõ„†1
-O
-java:S1128	"3Remove this unused import 'java.io.BufferedWriter'.(¬õº/8ëìõ„†1
-Q
-java:S1128
-"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8ëìõ„†1
