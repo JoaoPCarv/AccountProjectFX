@@ -26,9 +26,6 @@ public class Account extends Bean {
     @Column(name = "imageAcc")
     private byte[] image;
 
-    public Account() {
-    }
-
     public int getId() {
         return this.id;
     }
@@ -69,6 +66,15 @@ public class Account extends Bean {
         this.image = image;
     }
 
+    public Account() {}
+
+    public Account(String name, String email, String password, byte[] image) {
+        this.setName(name);
+        this.setEmail(email);
+        this.setPassword(password);
+        this.setImage(image);
+    }
+
     @Override
     public int hashCode() {
         return this.id;
@@ -79,9 +85,9 @@ public class Account extends Bean {
         StringBuffer sBuilder = new StringBuffer();
         sBuilder.append("*| ID: ");
         sBuilder.append(this.getId());
-        sBuilder.append("| Name: ");
+        sBuilder.append(" | Name: ");
         sBuilder.append(this.getName());
-        sBuilder.append("| Email: ");
+        sBuilder.append(" | Email: ");
         sBuilder.append(this.getEmail());
         sBuilder.append(" *|");
 

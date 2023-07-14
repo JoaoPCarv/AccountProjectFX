@@ -8,8 +8,11 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.time.ZoneId;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Locale;
+import java.util.Properties;
+import java.util.TimeZone;
+
+import static service.utils.StringUtils.requireNonNullArgs;
 
 public final class DateTimeProperties {
 
@@ -26,10 +29,6 @@ public final class DateTimeProperties {
 
     @Deprecated(since = "1.0")
     private DateTimeProperties() { /* This class should not be instantiated. */ }
-
-    private static void validateArguments(String... args) {
-        Arrays.stream(args).collect(Collectors.toList()).forEach(arg -> Objects.requireNonNull(arg));
-    }
 
     public static ZoneId getDefaultZoneId() throws IOException, PropertyNotFoundException, URISyntaxException {
         PropertiesManager propManager = PropertiesManager.getInstance();
@@ -56,7 +55,7 @@ public final class DateTimeProperties {
 
     public static void setCustomZoneId(String host, String ZoneId) throws IOException,
             ExistingPropertyException, URISyntaxException {
-        validateArguments(host, ZoneId);
+        requireNonNullArgs(host, ZoneId);
         PropertiesManager propManager = PropertiesManager.getInstance();
         Properties properties = propManager.loadPropertiesFromResourceName(propResource);
 
@@ -68,7 +67,7 @@ public final class DateTimeProperties {
 
     public static void setCustomLocale(String host, String languageTag) throws IOException,
             ExistingPropertyException, URISyntaxException {
-        validateArguments(host, languageTag);
+        requireNonNullArgs(host, languageTag);
         PropertiesManager propManager = PropertiesManager.getInstance();
         Properties properties = propManager.loadPropertiesFromResourceName(propResource);
 
@@ -80,7 +79,7 @@ public final class DateTimeProperties {
 
     public static void setCustomSimpleDateFormat(String host, String format) throws IOException,
             ExistingPropertyException, URISyntaxException {
-        validateArguments(host, format);
+        requireNonNullArgs(host, format);
         PropertiesManager propManager = PropertiesManager.getInstance();
         Properties properties = propManager.loadPropertiesFromResourceName(propResource);
 
@@ -92,7 +91,7 @@ public final class DateTimeProperties {
 
     private static String getCustomDateTimeProperty(String host, String mask)
             throws IOException, PropertyNotFoundException, URISyntaxException {
-        validateArguments(host);
+        requireNonNullArgs(host);
 
         PropertiesManager propManager = PropertiesManager.getInstance();
         Properties properties = propManager.loadPropertiesFromResourceName(propResource);

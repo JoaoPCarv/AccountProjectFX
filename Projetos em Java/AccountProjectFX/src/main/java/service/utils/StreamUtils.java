@@ -1,9 +1,15 @@
 package service.utils;
 
 import java.util.*;
-import java.util.function.Function;
+import java.util.function.*;
+import java.util.stream.Collector;
+import java.util.stream.Stream;
 
 public class StreamUtils {
+    public static <E> Collection<E> filterAndCollect(Stream<E> stream, Predicate<E> predicate) {
+        return stream.filter(predicate).toList();
+    }
+
     public static <T> List<T> mergeLists(List<T>... lists) {
 
         Function<List<List<T>>, List<T>> mergeAll = listsF -> {
@@ -34,6 +40,8 @@ public class StreamUtils {
         Map<Integer, String> map3 = Map.of(4, "?", 7, "Gato", 8, "Cachorro");
 
         mergeMaps(map1, map2, map3).forEach((k, v) -> System.out.println("Key = " + k + " | Value = " + v));
+
+        System.out.println(List.of("Joao", "Lima").toArray(new String[]{}).length);
 
     }
 
